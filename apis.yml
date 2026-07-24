@@ -1,21 +1,58 @@
 aid: blueprint-power
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blueprint-power.png
 name: Blueprint Power
-description: 'Blueprint Power is a company surfaced as a portfolio company of fifth-wall and added to
-  the API Evangelist network as a stub for enrichment. Sector: clean-energy. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Blueprint Power was a New York City software company, founded in 2017 by Robyn Beavers,
+  that turned commercial real estate portfolios into virtual power plants. Its cloud platform connected
+  to distributed energy assets in buildings — solar, batteries, cogeneration — and used data-driven and
+  machine-learning models to aggregate, orchestrate and transact that surplus capacity into wholesale
+  energy markets. It raised a $3.5M Series A (Congruent Ventures, MetaProp, Fifth Wall, Fred Wilson,
+  Brad Burnham) and was acquired by bp in October 2021, joining the bp Launchpad portfolio. As of this
+  enrichment pass the company operates no independent public surface: www.blueprintpower.com returns a
+  301 permanent redirect to bp.com/retailenergy, and no developer portal, API documentation, OpenAPI,
+  SDK, or public GitHub organization could be found. Retained in the network as an acquired-company
+  record with no API surface.'
 url: https://raw.githubusercontent.com/api-evangelist/blueprint-power/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - fifth-wall
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: acquired-no-api-surface
+x-status: acquired
+x-acquisition:
+  acquirer: bp
+  acquirer-slug: bp
+  announced: '2021-10-06'
+  source: https://www.bp.com/en/global/corporate/news-and-insights/press-releases/bp-to-grow-leading-us-technology-company-that-turns-commercial-buildings-into-virtual-power-plants.html
+  domain-redirect:
+    from: https://www.blueprintpower.com/
+    to: https://bp.com/retailenergy
+    status: 301
+    probed: '2026-07-20'
+x-api-surface: none
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Clean Energy
+- Energy
+- Virtual Power Plant
+- Distributed Energy Resources
+- Real Estate Technology
+- Grid
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +60,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/blueprint-power-domain-security.yml
 - type: Website
   url: https://www.blueprintpower.com/
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
